@@ -1,0 +1,32 @@
+/* components/DonateButton.module.css */
+.donateButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #e76f51;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.donateButton:hover {
+  background-color: #f4a261;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 12px;
+  color: #ffffff;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
