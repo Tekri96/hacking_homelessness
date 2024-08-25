@@ -1,5 +1,6 @@
 // components/ResourceMap.js
 import React, { useState } from 'react';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import styles from './ResourceMap.module.css';
 
 const ResourceMap = () => {
@@ -12,12 +13,20 @@ const ResourceMap = () => {
     'Food Centre'
   ];
 
+  // Coordinates for the University of Calgary
+  const center = {
+    lat: 51.0785,
+    lng: -114.1354
+  };
+
   const handleResourceClick = (resource) => {
     setSelectedResource(resource);
     // Here you would typically make an API call to get the locations
     // and update the map accordingly
     console.log(`Fetching locations for ${resource}`);
   };
+  const apiKey = process.env.NEXT_PUBLIC_MAPS_API_KEY;
+  if (!apiKey) alert(`Please set your Google Maps API key in a .env file at the root of your project. The key should be named NEXT_PUBLIC_MAPS_API_KEY.`);
 
   return (
     <div className={styles.resourceMap}>
@@ -34,12 +43,16 @@ const ResourceMap = () => {
         ))}
       </div>
       <div className={styles.mapContainer}>
-        {selectedResource ? (
-          <p>Google Maps view of {selectedResource} would be displayed here.</p>
-        ) : (
-          <p>Select a resource to view locations on the map.</p>
-        )}
-        {/* Here you would integrate the Google Maps component */}
+        <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_MAPS_API_KEY}>
+          <GoogleMap
+            mapContainerStyle={{ width: '100%', height: '400px' }}
+            center={center}
+            zoom={15}
+          >
+            {/* You can add markers here based on selectedResource */}
+            {selectedResource && <Marker position={center} />}
+          </GoogleMap>
+        </LoadScript>
       </div>
     </div>
   );
