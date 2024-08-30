@@ -1,0 +1,59 @@
+/* components/SuccessStories.module.css */
+.successStories {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.successStories h2 {
+  color: #1a5f7a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.successStories p {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.storyCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.storyCard:hover {
+  transform: translateY(-5px);
+}
+
+.storyImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.storyContent {
+  padding: 1rem;
+}
+
+.storyTitle {
+  color: #1a5f7a;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.storyExcerpt {
+  color: #2c3e50;
+  font-size: 0.9rem;
+}

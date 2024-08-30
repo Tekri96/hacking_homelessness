@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import styles from '../../styles/WelcomePage.module.css';
 import { FaDonate } from 'react-icons/fa';
+import DonateButton from '../../components/DonateButton';
 
 export default function WelcomePage() {
   const [email, setEmail] = useState('');
