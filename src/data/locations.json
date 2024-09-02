@@ -1,3 +1,590 @@
 {
-  "shelters": [{ "long": 0, "lat": 0 }]
+  "shelters": [
+    {
+      "name": "Alpha House Shelter",
+      "address": "203 15 Avenue SE",
+      "lat": 51.03836473466961,
+      "lng": -114.06050644840056,
+      "type": "Shelter",
+      "phone": "403-234-7388"
+    },
+    {
+      "name": "Calgary Drop-In & Rehab Centre",
+      "address": "1 Dermot Baldwin Way SE",
+      "lat": 51.048952298298005,
+      "lng": -114.05403430236741,
+      "type": "Shelter",
+      "phone": "403-266-3600"
+    },
+    {
+      "name": "YW Calgary Emergency Shelter",
+      "address": "1715 17 Avenue SE",
+      "lat": 51.03745343971088,
+      "lng": -114.02352217353183,
+      "type": "Shelter",
+      "phone": "403-705-0315"
+    },
+    {
+      "name": "Mustard Seed Foothills Shelter",
+      "address": "7025 44 Street SE",
+      "lat": 50.99358102808549,
+      "lng": -113.97066523120596,
+      "type": "Shelter",
+      "phone": "403-723-9422"
+    },
+    {
+      "name": "Salvation Army Centre of Hope (for men only)",
+      "address": "420 9 Avenue SE",
+      "lat": 51.04459583417639,
+      "lng": -114.05404808887573,
+      "type": "Shelter",
+      "phone": "403-410-1111"
+    },
+    {
+      "name": "Salvation Army Women’s Integrated Supportive Housing (WISH)",
+      "address": "Wagner Place, 3013 15 Avenue SW",
+      "lat": 51.039936997189066,
+      "lng": -114.09926192186506,
+      "type": "Shelter",
+      "phone": "403-930-2711"
+    },
+    {
+      "name": "Inn From the Cold (for families)",
+      "address": "Wagner Place, 3013 15 Avenue SW",
+      "lat": 51.042689956738556,
+      "lng": -114.06276327353162,
+      "type": "Shelter",
+      "phone": "403-263-8384"
+    }
+  ],
+
+  "libraries": [
+    {
+      "name": "Bowness Library",
+      "address": "6532 Bowness Road NW, Calgary, AB T3B 0E9",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Central Library",
+      "address": "800 3 St SE, Calgary, Alberta T2G 2E7",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Country Hills Library",
+      "address": "11950 Country Village Link NE, Calgary, AB T3K 6E3",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Crowfoot Library",
+      "address": "8665 Nose Hill Drive NW, Calgary, AB T3G 5T3",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Fish Creek Library",
+      "address": "11161 Bonaventure Drive SE, Calgary, AB T2J 6S1",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Forest Lawn Library",
+      "address": "4807 8 Avenue SE, Calgary, AB T2A 4M1",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Giuffre Family Library",
+      "address": "3223 14 Street SW, Calgary, AB T2T 3V8",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Judith Umbach Library",
+      "address": "6617 Centre Street N, Calgary, AB T2K 4Y5",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Louise Riley Library",
+      "address": "1904 14 Avenue NW, Calgary, AB T2N 1M5",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Memorial Park Library",
+      "address": "1221 2 Street SW, Calgary, AB T2R 0W5",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Nicholls Family Library",
+      "address": "1421 33 Street SW, Calgary, AB T3C 1P2",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Nose Hill Library",
+      "address": "1530 Northmount Drive NW, Calgary, AB T2L 0G6",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Quarry Park Library",
+      "address": "108 Quarry Park Road SE, Calgary, AB T2C 5R1",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Rocky Ridge Library",
+      "address": "11300 Rocky Ridge Road NW, Calgary, AB T3G 5H3",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-226-2020"
+    },
+    {
+      "name": "Saddletowne Library",
+      "address": "150 7555 Falconridge Boulevard NE, Calgary, AB T3J 0C9",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-226-2020"
+    },
+    {
+      "name": "Sage Hill Library",
+      "address": "19 Sage Hill Passage NW, Calgary, AB T3R 0J6",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-226-2020"
+    },
+    {
+      "name": "Seton Library",
+      "address": "4995 Market St SE, Calgary, Alberta T3M 2P9",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Shawnessy Library",
+      "address": "333 Shawville Boulevard SE, Calgary, AB T2Y 4H3",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Signal Hill Library",
+      "address": "5994 Signal Hill Centre SW, Calgary, AB T3H 3P8",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-226-2020"
+    },
+    {
+      "name": "Southwood Library",
+      "address": "924 Southland Drive SW, Calgary, AB T2W 0J9",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-226-2020"
+    },
+    {
+      "name": "Village Square Library",
+      "address": "2623 56 Street NE, Calgary, AB T1Y 6E7",
+      "lat": "",
+      "lng": "",
+      "type": "Public Library",
+      "phone": "403-226-2020"
+    }
+  ],
+
+"restrooms": [
+  {
+    "name": "Central Memorial Park",
+    "address": "320 13th Ave. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Century Gardens",
+    "address": "840 Eighth Ave. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Devonian Gardens",
+    "address": "THE CORE Shopping Centre",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Millennium Park",
+    "address": "1220 Ninth Ave. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Olympic Plaza",
+    "address": "222 Eighth Ave. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Prince's Island Park",
+    "address": "25 Prince's Island Pa. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  }
+
+  {
+    "name": "Prairie Winds",
+    "address": "223 Castleridge Bv. N.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Prairie Winds Park",
+    "address": "223 Castleridge Bv. N.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Prairie Winds Spray Park",
+    "address": "223 Castleridge Bv. N.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Rotary Spray Park",
+    "address": "617 First St. N.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Baker Park",
+    "address": "9333 Scenic Bow Rd. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Bowness Park (main entrance)",
+    "address": "8900 48th Ave. NW",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Bowness Park (next to café)",
+    "address": "8900 48th Ave. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Bowness Park (west near picnic site 5 and 8)",
+    "address": "8900 48th Ave. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Bowness Park – Seasonal 2",
+    "address": "8900 48th Ave. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Bowness Park – Seasonal 3",
+    "address": "8900 48th Ave. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Bowness Park wading pool",
+    "address": "8900 48th Ave. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Confederation Park",
+    "address": "905 30th Ave. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Haskayne Park",
+    "address": "9000 149th St. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Nose Hill Park pit toilet",
+    "address": "4617 14th St. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Nose Hill Park pit toilet",
+    "address": "8447 14th St. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Nose Hill Park pit toilet",
+    "address": "2908 John Laurie Bv. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Nose Hill Park",
+    "address": "8102 Shaganappi Tr. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Point McKay",
+    "address": "4103 Montgomery Vw. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Queen's Park Admin Building",
+    "address": "3219 Fourth St. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Queen's Park Mausoleum",
+    "address": "3425 Fourth St. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Riley Park",
+    "address": "800 12th St. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Riley Park wading pool",
+    "address": "800 12th St. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Sunnyside",
+    "address": "286 Memorial Dr. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "West Confederation Spray Park",
+    "address": "2020 Chicoutimi Dr. N.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  }
+  {
+    "name": "Carburn Park",
+    "address": "67 Riverview Dr. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Elliston Park Pit Toilet East",
+    "address": "2024 60th St. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Elliston Park Pit Toilet West",
+    "address": "2024 60th St. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Pearce Estate Park",
+    "address": "1450 17A St. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Inglewood Bird Sanctuary Visitor Centre",
+    "address": "2425 Ninth Ave. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Ralph Klein Park",
+    "address": "12350 84th St. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Ralph Klein Park Interpretive Centre",
+    "address": "12350 84th St. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Reader Rock Garden",
+    "address": "311 25th Ave. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Union Cemetery Caretakers Cottage",
+    "address": "3025 Spiller Rd. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Valleyview Spray Park",
+    "address": "3224 26th St. S.E.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  }
+
+  {
+    "name": "90th Ave. Public Washrooms",
+    "address": "3520 90th Ave. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Glenmore Seasonal Washroom",
+    "address": "8415 24th St. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Griffith Woods Park",
+    "address": "45 Discovery Ridge Li. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Heritage Boat Launch",
+    "address": "8003 14th St. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Lakeview Public Washrooms",
+    "address": "7305 Crowchild Tr. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "River Park / Sandy Beach",
+    "address": "1220 50th Ave. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Somerset Spray Park",
+    "address": "999 Somerset Dr. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Stanley Park",
+    "address": "350 42nd Ave. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+  },
+  {
+    "name": "Variety Spray Park",
+    "address": "8935 24th St. S.W.",
+    "lat": "",
+    "lng": "",
+    "type": "Public Washrooms"
+
+  }
+],
+"foodCentres": [
+  {
+    "name": "Calgary Food Bank",
+    "address": "5000 11 Street SE, Calgary, Alberta T2H 2Y5",
+    "lat": "",
+    "lng": "",
+    "type": "Food Centres",
+    "phone": "403-253-2055"
+  }
+]
 }
