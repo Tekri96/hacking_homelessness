@@ -1,4 +1,3 @@
-// components/Navigation.js
 import React from 'react';
 import styles from './Navigation.module.css';
 
@@ -6,6 +5,7 @@ const Navigation = ({ activeSection, setActiveSection }) => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'resourceMap', label: 'Resource Map' },
+    { id: 'rippleOfKindness', label: 'Ripple of Kindness' },
     { id: 'askForHelp', label: 'Ask For Help' },
     { id: 'makeDonation', label: 'Make a Donation' },
     { id: 'successStories', label: 'Success Stories' },
