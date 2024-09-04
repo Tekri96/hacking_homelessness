@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import styles from './RippleOfKindness.module.css';
+import { collection, addDoc, getDocs, query, orderBy, doc } from 'firebase/firestore';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { db, storage } from '@/frontend/firebase';
 
 const RippleOfKindness = () => {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState({ title: '', description: '', image: null });
+  const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   useEffect(() => {
-    // In a real app, you'd fetch posts from an API here
-    // For now, we'll use some dummy data
-    setPosts([
-      { id: 1, title: 'Subway Sandwiches', description: 'Bought two footlongs for a homeless couple', date: '2024-09-01', likes: 15 },
-      { id: 2, title: 'Warm Blankets', description: 'Distributed 5 blankets in the park', date: '2024-09-02', likes: 23 },
-    ]);
+    fetchPosts();
   }, []);
+
+  const fetchPosts = async () => {
+    const kindnessDocRef = doc(db, 'homelessness', 'kindness');
+    const postsCollection = collection(kindnessDocRef, 'acts');
+    const q = query(postsCollection, orderBy('date', 'desc'));
+    const querySnapshot = await getDocs(q);
+    const fetchedPosts = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+    setPosts(fetchedPosts);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,17 +36,53 @@ const RippleOfKindness = () => {
     setNewPost(prev => ({ ...prev, image: file }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real app, you'd send this data to an API
-    const post = {
-      id: posts.length + 1,
-      ...newPost,
-      date: new Date().toISOString().split('T')[0],
-      likes: 0,
-    };
-    setPosts(prev => [post, ...prev]);
-    setNewPost({ title: '', description: '', image: null });
+    setUploading(true);
+    setUploadProgress(0);
+
+    try {
+      let imageUrl = '';
+      if (newPost.image) {
+        const storageRef = ref(storage, `homelessness/kindness/${Date.now()}_${newPost.image.name}`);
+        const uploadTask = uploadBytesResumable(storageRef, newPost.image);
+
+        await new Promise((resolve, reject) => {
+          uploadTask.on(
+            'state_changed',
+            (snapshot) => {
+              const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+              setUploadProgress(progress);
+            },
+            (error) => reject(error),
+            async () => {
+              imageUrl = await getDownloadURL(uploadTask.snapshot.ref);
+              resolve();
+            }
+          );
+        });
+      }
+
+      const post = {
+        title: newPost.title,
+        description: newPost.description,
+        imageUrl,
+        date: new Date().toISOString(),
+        likes: 0
+      };
+
+      const kindnessDocRef = doc(db, 'homelessness', 'kindness');
+      const actsCollectionRef = collection(kindnessDocRef, 'acts');
+      const docRef = await addDoc(actsCollectionRef, post);
+
+      setPosts(prev => [{ id: docRef.id, ...post }, ...prev]);
+      setNewPost({ title: '', description: '', image: null });
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    } finally {
+      setUploading(false);
+      setUploadProgress(0);
+    }
   };
 
   return (
@@ -66,7 +114,18 @@ const RippleOfKindness = () => {
           accept="image/*"
           className={styles.fileInput}
         />
-        <button type="submit" className={styles.button}>Share Your Kindness</button>
+        {uploading && (
+          <div className={styles.progressContainer}>
+            <div
+              className={styles.progressBar}
+              style={{ width: `${uploadProgress}%` }}
+            ></div>
+            <span className={styles.progressText}>{Math.round(uploadProgress)}%</span>
+          </div>
+        )}
+        <button type="submit" className={styles.button} disabled={uploading}>
+          {uploading ? 'Uploading...' : 'Share Your Kindness'}
+        </button>
       </form>
 
       <div className={styles.posts}>
@@ -74,8 +133,11 @@ const RippleOfKindness = () => {
           <div key={post.id} className={styles.post}>
             <h3>{post.title}</h3>
             <p>{post.description}</p>
+            {post.imageUrl && (
+              <img src={post.imageUrl} alt={post.title} className={styles.postImage} />
+            )}
             <div className={styles.postFooter}>
-              <span>{post.date}</span>
+              <span>{new Date(post.date).toLocaleDateString()}</span>
               <button className={styles.likeButton}>❤️ {post.likes}</button>
             </div>
           </div>
