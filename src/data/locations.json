@@ -1,0 +1,105 @@
+
+{
+  "shelters": [
+    {
+      "name": "Alpha House Shelter",
+      "address": "203 15 Avenue SE",
+      "lat": 51.03836473466961,
+      "lng": -114.06050644840056,
+      "type": "Shelter",
+      "phone": "403-234-7388"
+    },
+    {
+      "name": "Calgary Drop-In & Rehab Centre",
+      "address": "1 Dermot Baldwin Way SE",
+      "lat": 51.048952298298005,
+      "lng": -114.05403430236741,
+      "type": "Shelter",
+      "phone": "403-266-3600"
+    },
+    {
+      "name": "YW Calgary Emergency Shelter",
+      "address": "1715 17 Avenue SE",
+      "lat": 51.03745343971088,
+      "lng": -114.02352217353183,
+      "type": "Shelter",
+      "phone": "403-705-0315"
+    },
+    {
+      "name": "Mustard Seed Foothills Shelter",
+      "address": "7025 44 Street SE",
+      "lat": 50.99358102808549,
+      "lng": -113.97066523120596,
+      "type": "Shelter",
+      "phone": "403-723-9422"
+    },
+    {
+      "name": "Salvation Army Centre of Hope (for men only)",
+      "address": "420 9 Avenue SE",
+      "lat": 51.04459583417639,
+      "lng": -114.05404808887573,
+      "type": "Shelter",
+      "phone": "403-410-1111"
+    },
+    {
+      "name": "Salvation Army Women’s Integrated Supportive Housing (WISH)",
+      "address": "Wagner Place, 3013 15 Avenue SW",
+      "lat": 51.039936997189066,
+      "lng": -114.09926192186506,
+      "type": "Shelter",
+      "phone": "403-930-2711"
+    },
+    {
+      "name": "Inn From the Cold (for families)",
+      "address": "Wagner Place, 3013 15 Avenue SW",
+      "lat": 51.042689956738556,
+      "lng": -114.06276327353162,
+      "type": "Shelter",
+      "phone": "403-263-8384"
+    }
+  ],
+  "libraries": [
+    {
+      "name": "Central Library",
+      "address": "800 3 St SE, Calgary, Alberta T2G 2E7",
+      "lat": 51.045,
+      "lng": -114.055,
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    },
+    {
+      "name": "Fish Creek Library",
+      "address": "11161 Bonaventure Drive SE, Calgary, AB T2J 6S1",
+      "lat": 50.958,
+      "lng": -114.068,
+      "type": "Public Library",
+      "phone": "403-260-2600"
+    }
+  ],
+  "restrooms": [
+    {
+      "name": "Central Memorial Park",
+      "address": "320 13th Ave. S.W.",
+      "lat": 51.041,
+      "lng": -114.071,
+      "type": "Public Washrooms"
+    },
+    {
+      "name": "Olympic Plaza",
+      "address": "222 Eighth Ave. S.E.",
+      "lat": 51.045,
+      "lng": -114.059,
+      "type": "Public Washrooms"
+    }
+  ],
+  "foodCentres": [
+    {
+      "name": "Calgary Food Bank",
+      "address": "5000 11 Street SE, Calgary, Alberta T2H 2Y5",
+      "lat": 50.980,
+      "lng": -114.042,
+      "type": "Food Centres",
+      "phone": "403-253-2055"
+    }
+  ]
+}
