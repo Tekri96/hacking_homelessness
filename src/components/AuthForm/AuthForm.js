@@ -64,7 +64,7 @@ const AuthForm = () => {
     return (
         <div className={styles.authContainer}>
             <form onSubmit={handleSubmit} className={styles.authForm}>
-                <h2>{isSignUp ? 'Hola! Welcome to the community' : 'Sign In to Continue'}</h2>
+                <h2>{isSignUp ? 'Hola! Welcome to the community' : 'Sign In to continue'}</h2>
                 <input
                     type="email"
                     value={email}
