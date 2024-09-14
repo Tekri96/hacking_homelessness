@@ -9,21 +9,28 @@ const RippleOfKindness = () => {
   const [newPost, setNewPost] = useState({ title: '', description: '', image: null });
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchPosts();
   }, []);
 
   const fetchPosts = async () => {
-    const kindnessDocRef = doc(db, 'homelessness', 'kindness');
-    const postsCollection = collection(kindnessDocRef, 'acts');
-    const q = query(postsCollection, orderBy('date', 'desc'));
-    const querySnapshot = await getDocs(q);
-    const fetchedPosts = querySnapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
-    setPosts(fetchedPosts);
+    try {
+      const kindnessDocRef = doc(db, 'homelessness', 'kindness');
+      const postsCollection = collection(kindnessDocRef, 'acts');
+      const q = query(postsCollection, orderBy('date', 'desc'));
+      const querySnapshot = await getDocs(q);
+      const fetchedPosts = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setPosts(fetchedPosts);
+      setError(null);
+    } catch (error) {
+      console.error("Error fetching posts:: ", error);
+      setError(`Failed to load posts, Reason: ${error.message}`);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -40,6 +47,7 @@ const RippleOfKindness = () => {
     e.preventDefault();
     setUploading(true);
     setUploadProgress(0);
+    setError(null);
 
     try {
       let imageUrl = '';
@@ -79,6 +87,7 @@ const RippleOfKindness = () => {
       setNewPost({ title: '', description: '', image: null });
     } catch (error) {
       console.error("Error adding document: ", error);
+      setError(`Failed to load posts, Reason: ${error.message}`);
     } finally {
       setUploading(false);
       setUploadProgress(0);
@@ -89,6 +98,8 @@ const RippleOfKindness = () => {
     <div className={styles.container}>
       <h2 className={styles.title}>Ripple of Kindness</h2>
       <p className={styles.description}>Share your acts of kindness and inspire others!</p>
+
+      {error && <div className={styles.error}>{error}</div>}
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <input
