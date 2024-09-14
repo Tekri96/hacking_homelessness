@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import styles from './ResourceMap.module.css';
 
 const containerStyle = {
@@ -18,6 +19,7 @@ const ResourceMap = () => {
   const [error, setError] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [resourceType, setResourceType] = useState('shelters');
+  const [user, setUser] = useState(null);
 
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
@@ -25,6 +27,17 @@ const ResourceMap = () => {
   });
 
   useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (!user) return; // Don't fetch if user is not logged in
+
     const fetchLocations = async () => {
       console.log(`Fetching ${resourceType} locations`);
       try {
@@ -49,7 +62,7 @@ const ResourceMap = () => {
     };
 
     fetchLocations();
-  }, [resourceType]);
+  }, [resourceType, user]);
 
   const onLoad = useCallback(function callback(map) {
     console.log('Map loaded');
@@ -90,6 +103,15 @@ const ResourceMap = () => {
     restrooms: 'Public Restrooms',
     foodCentres: 'Food Centres'
   };
+
+  if (!user) {
+    return (
+      <div className={styles.resourceMap}>
+        <h2>Resource Map</h2>
+        <p className={styles.loginMessage}>Please log in to see the resources.</p>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.resourceMap}>
