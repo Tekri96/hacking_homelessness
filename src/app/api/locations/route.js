@@ -6,7 +6,7 @@ export async function GET() {
   try {
     const jsonPath = path.join(process.cwd(), 'src', 'data', 'locations.json');
     const fileContents = await fs.readFile(jsonPath, 'utf8');
-    
+
     let data;
     try {
       data = JSON.parse(fileContents);
@@ -14,9 +14,6 @@ export async function GET() {
       console.error('Error parsing JSON:', parseError);
       return NextResponse.json({ message: 'Error parsing locations data' }, { status: 500 });
     }
-
-    console.log('API: Data loaded:', data);
-
     return NextResponse.json(data);
   } catch (error) {
     console.error('API: Error reading locations:', error);
