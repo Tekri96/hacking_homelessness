@@ -104,7 +104,7 @@ const SuccessStories = () => {
   return (
     <div className={styles.successStories}>
       <h2 className={styles.mainTitle}>Success Stories and News</h2>
-      <p className={styles.mainDescription}>Read about the lives we've helped change and recent developments in tackling homelessness:</p>
+      <p className={styles.mainDescription}>Explore inspiring stories of resilience and recent developments in our community's efforts to address homelessness:</p>
       <div className={styles.storyGrid}>
         {stories.map((story) => (
           <a key={story.id} href={story.url} target="_blank" rel="noopener noreferrer" className={styles.storyCard}>
