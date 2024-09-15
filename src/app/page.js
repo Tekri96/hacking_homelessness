@@ -4,7 +4,7 @@ import styles from '../styles/WelcomePage.module.css';
 import HomePage from '@/components/HomePage/HomePage';
 import Navigation from '@/components/Navigation/Navigation.js';
 import ResourceMap from '@/components/ResourceMap/ResourceMap.js';
-import AskForHelp from '@/components/AskForHelp/AskForHelp.js';
+import ChatWithNand from '@/components/ChatWithNand/ChatWithNand.js';
 import MakeDonation from '@/components/MakeDonation/MakeDonation.js';
 import SuccessStories from '@/components/SuccessStories/SuccessStories.js';
 import RippleOfKindness from '@/components/RippleOfKindness/RippleOfKindness.js';
@@ -19,8 +19,8 @@ export default function WelcomePage() {
         return <HomePage />;
       case 'resourceMap':
         return <ResourceMap />;
-      case 'askForHelp':
-        return <AskForHelp />;
+      case 'ChatWithNand':
+        return <ChatWithNand />;
       case 'makeDonation':
         return <MakeDonation />;
       case 'successStories':
@@ -34,15 +34,22 @@ export default function WelcomePage() {
     }
   };
 
-  return (
-    <div className={styles.container}>
-      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main className={styles.main}>
-        {renderSection()}
-      </main>
-      <footer className={styles.footer}>
+return (
+  <div className={styles.container}>
+    <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
+    <main className={styles.main}>
+      {renderSection()}
+    </main>
+    <footer className={styles.footer}>
+      <div className={styles.footerContent}>
+        <img 
+          src="https://shivam-sahil.vercel.app/morpankh.svg" 
+          alt="CalgaryConnect Logo" 
+          className={styles.footerLogo}
+        />
         <p>© 2024 CalgaryConnect. All rights reserved.</p>
-      </footer>
-    </div>
-  );
+      </div>
+    </footer>
+  </div>
+);
 }

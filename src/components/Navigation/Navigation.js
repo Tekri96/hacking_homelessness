@@ -17,7 +17,7 @@ const Navigation = ({ activeSection, setActiveSection }) => {
   const navItems = [
     { id: 'home', label: 'Home', alwaysShow: true },
     { id: 'resourceMap', label: 'Resource Map', authRequired: true },
-    { id: 'askForHelp', label: 'Ask for Help', alwaysShow: true },
+    { id: 'ChatWithNand', label: 'Ask for Help', alwaysShow: true },
     { id: 'makeDonation', label: 'Make a Donation', alwaysShow: true },
     { id: 'successStories', label: 'Success Stories', alwaysShow: true },
     { id: 'rippleOfKindness', label: 'Ripple of Kindness', authRequired: true },

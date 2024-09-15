@@ -166,24 +166,24 @@
     {
       "name": "Rocky Ridge Library",
       "address": "11300 Rocky Ridge Road NW, Calgary, AB T3G 5H3",
-      "lat": "",
-      "lng": "",
+      "lat": "51.15714864160785", 
+      "lng": "-114.23132341825888",
       "type": "Public Library",
       "phone": "403-226-2020"
     },
     {
       "name": "Saddletowne Library",
       "address": "150 7555 Falconridge Boulevard NE, Calgary, AB T3J 0C9",
-      "lat": "",
-      "lng": "",
+      "lat": "51.12025151575219",
+      "lng": "-113.94824159127764",
       "type": "Public Library",
       "phone": "403-226-2020"
     },
     {
       "name": "Sage Hill Library",
       "address": "19 Sage Hill Passage NW, Calgary, AB T3R 0J6",
-      "lat": "",
-      "lng": "",
+      "lat": "51.168869471947374", 
+      "lng": "-114.14711414709421",
       "type": "Public Library",
       "phone": "403-226-2020"
     },
@@ -198,16 +198,16 @@
     {
       "name": "Shawnessy Library",
       "address": "333 Shawville Boulevard SE, Calgary, AB T2Y 4H3",
-      "lat": "",
-      "lng": "",
+      "lat": "50.89828587195556", 
+      "lng": "-114.06387198943919",
       "type": "Public Library",
       "phone": "403-260-2600"
     },
     {
       "name": "Signal Hill Library",
       "address": "5994 Signal Hill Centre SW, Calgary, AB T3H 3P8",
-      "lat": "",
-      "lng": "",
+      "lat": "51.01918542016511", 
+      "lng": "-114.17530179921856",
       "type": "Public Library",
       "phone": "403-226-2020"
     },
@@ -254,22 +254,22 @@
     {
       "name": "Millennium Park",
       "address": "1220 Ninth Ave. S.W.",
-      "lat": "",
-      "lng": "",
+      "lat": "51.04609925983219", 
+      "lng": "-114.09154737844617",
       "type": "Public Washrooms"
     },
     {
       "name": "Olympic Plaza",
       "address": "222 Eighth Ave. S.E.",
-      "lat": "",
-      "lng": "",
+      "lat": "51.0456951121082",
+      "lng": "-114.05906063161012",
       "type": "Public Washrooms"
     },
     {
       "name": "Prince's Island Park",
       "address": "25 Prince's Island Pa. S.W.",
-      "lat": "",
-      "lng": "",
+      "lat": "51.05542443593947",
+      "lng": "-114.071684894727",
       "type": "Public Washrooms"
     },
 
@@ -304,8 +304,8 @@
     {
       "name": "Baker Park",
       "address": "9333 Scenic Bow Rd. N.W.",
-      "lat": "",
-      "lng": "",
+      "lat": "51.101561776515396",
+      "lng": "-114.22082510291818",
       "type": "Public Washrooms"
     },
     {
@@ -318,8 +318,8 @@
     {
       "name": "Bowness Park (next to café)",
       "address": "8900 48th Ave. N.W.",
-      "lat": "",
-      "lng": "",
+      "lat": "51.0971416000266",
+      "lng": "-114.2173434894266",
       "type": "Public Washrooms"
     },
     {
@@ -353,8 +353,8 @@
     {
       "name": "Confederation Park",
       "address": "905 30th Ave. N.W.",
-      "lat": "",
-      "lng": "",
+      "lat": "51.07999825695057",
+      "lng": "-114.07935010291956",
       "type": "Public Washrooms"
     },
     {
@@ -367,8 +367,8 @@
     {
       "name": "Nose Hill Park pit toilet",
       "address": "4617 14th St. N.W.",
-      "lat": "",
-      "lng": "",
+      "lat": "51.09351761361797",
+      "lng": "-114.09489074709903",
       "type": "Public Washrooms"
     },
     {
@@ -587,3 +587,14 @@
     }
   ]
 }
+
+
+
+/* New style for login message */
+.loginMessage {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1a5f7a;
+  margin-top: 2rem;
+} */
+
