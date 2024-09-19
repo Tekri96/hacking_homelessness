@@ -140,3 +140,33 @@
       height: 200px;
     }
   }
+
+
+  .loginBanner {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  
+  .infoIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .loginLink {
+    background: none;
+    border: none;
+    color: #0d47a1;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  
+  .loginLink:hover {
+    color: #1976d2;
+  }

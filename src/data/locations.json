@@ -187,8 +187,8 @@
     {
       "name": "Calgary Food Bank",
       "address": "5000 11 Street SE, Calgary, Alberta T2H 2Y5",
-      "lat": 551.017473591215435,
-      "lng": -114.0380998728112,
+      "lat": 51.010857663426265, 
+      "lng": -114.03605690086451,
       "type": "Food Centres",
       "phone": "403-253-2055"
     }

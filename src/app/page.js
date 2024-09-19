@@ -11,12 +11,13 @@ import RippleOfKindness from '@/components/RippleOfKindness/RippleOfKindness.js'
 import AuthForm from '@/components/AuthForm/AuthForm.js';
 
 export default function WelcomePage() {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('home'); // State to manage active section
 
+  // Function to render sections based on the activeSection value
   const renderSection = () => {
     switch (activeSection) {
       case 'home':
-        return <HomePage />;
+        return <HomePage setActiveSection={setActiveSection} />; // Pass setActiveSection to HomePage
       case 'resourceMap':
         return <ResourceMap />;
       case 'ChatWithNand':
@@ -30,26 +31,27 @@ export default function WelcomePage() {
       case 'auth':
         return <AuthForm />;
       default:
-        return <HomePage />;
+        return <HomePage setActiveSection={setActiveSection} />; // Default to HomePage with setActiveSection
     }
   };
 
-return (
-  <div className={styles.container}>
-    <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
-    <main className={styles.main}>
-      {renderSection()}
-    </main>
-    <footer className={styles.footer}>
-      <div className={styles.footerContent}>
-        <img 
-          src="https://shivam-sahil.vercel.app/morpankh.svg" 
-          alt="CalgaryConnect Logo" 
-          className={styles.footerLogo}
-        />
-        <p>© 2024 CalgaryConnect. All rights reserved.</p>
-      </div>
-    </footer>
-  </div>
-);
+  return (
+    <div className={styles.container}>
+      {/* Pass activeSection and setActiveSection to Navigation */}
+      <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
+      <main className={styles.main}>
+        {renderSection()} {/* Render the active section */}
+      </main>
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <img 
+            src="https://shivam-sahil.vercel.app/morpankh.svg" 
+            alt="CalgaryConnect Logo" 
+            className={styles.footerLogo}
+          />
+          <p>© 2024 CalgaryConnect. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
 }
